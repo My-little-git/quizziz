@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 $purple: #400862;
@@ -20,14 +21,14 @@ body{
   width: 100%;
 }
 
-.carousel-item{
+.question-card{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: $purple-light;
   width: 80%;
-  margin: 0 10%;
+  margin: 4% 10% 0;
   height: 600px;
   border: 2px solid #000000;
   border-radius: 20px;
@@ -57,18 +58,59 @@ body{
   background-color: $purple;
 }
 
+.carousel-indicators button{
+  text-indent: 0 !important;
+  height: 30px !important;
+  border: 1px solid black !important;
+  border-radius: 5px !important;
+}
+
+.pressed{
+  filter: brightness(0.6);
+}
+
+.correct{
+  background-color: #77c732 !important;
+  opacity: 1 !important;
+}
+
+.incorrect{
+  background-color: #bd2a2a !important;
+  opacity: 1 !important;
+}
+
 .bg-yellow{
   background-color: #e1e100;
+  transition: background-color .2s linear;
+
+  &:hover{
+    background-color: #c5c500;
+  }
 }
 
 .bg-blue{
   background-color: #0065ea;
+  transition: background-color .2s linear;
+
+  &:hover{
+    background-color: #0052cb;
+  }
 }
 
 .bg-green{
   background-color: #00e000;
+  transition: background-color .2s linear;
+
+  &:hover{
+    background-color: #00b900;
+  }
 }
 
 .bg-red{
   background-color: #e50000;
+  transition: background-color .2s linear;
+
+  &:hover{
+    background-color: #b00000;
+  }
 }
